@@ -99,13 +99,6 @@ const deepEqual = (obj1, obj2) => {
     return true;
 };
 
-/*
-const obj1 = {here: {is:"on", other:"3"}, object:"Y"};
-const obj2 = {here: {is:"on", other:"2"}, object:"Y"};
-
-console.log(deepEqual(obj1, obj2));
-*/ 
-
 /* разворачивание строки */
 
 function reverseStr(str) {
