@@ -10,12 +10,9 @@ counter = new Object();
 
 // 3. Функция-конструктор
 
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+function User() {}
  
-counter = new Person();
+counter = new User();
 
 // 4. Object.create
 
@@ -23,33 +20,32 @@ counter = Object.create(null);
 
 // 5. С помощью классов
 
-class Person2 {
+class Person {
     constructor() {}
-}
-  
-counter = new Person2();
+}  
+counter = new Person();
 
 /* Копирование объекта */
 
 // 1. spread-оператор
 
-counter = { key: 'value' };
-let copiedObject = { ...counter };
+counter = {};
+let copiedObject = {...counter};
 
 // 2. Object.assign()
 
-counter = { key: 'value' };
+counter = {};
 let copiedObject2 = Object.assign({}, counter);
 
 // 3. JSON.parse() и JSON.stringify()
 
-counter = { key: 'value', nested: { key: 'nestedValue' } };
+counter = {key:'value', nested:{key:'nestedValue'}};
 let copiedObject3 = JSON.parse(JSON.stringify(counter));
 
 // 4. библиотека Lodash
 
 const _ = require('lodash');
-counter = { key: 'value' };
+counter = {};
 let copiedObject4 = _.cloneDeep(counter);
 
 /* Создать функцию */
